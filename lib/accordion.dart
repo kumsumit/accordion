@@ -51,7 +51,7 @@ class Accordion extends StatelessWidget with CommonParams {
   final listCtrl = Get.put(ListController());
 
   Accordion({
-    Key? key,
+    super.key,
     int? maxOpenSections,
     required this.children,
     int? initialOpeningSequenceDelay,
@@ -89,7 +89,7 @@ class Accordion extends StatelessWidget with CommonParams {
     /// if to use horizontal scaling of a section when opening or closing
     bool? scaleWhenAnimating,
     String? accordionId,
-  }) : super(key: key) {
+  }) {
     final listCtrl = Get.put(ListController(), tag: hashCode.toString());
     listCtrl.initialOpeningSequenceDelay = initialOpeningSequenceDelay ?? 0;
     listCtrl.maxOpenSections = maxOpenSections ?? 1;
